@@ -1,3 +1,4 @@
+"use client";
 import Logo from "../../assets/img/logo/logo.png";
 import Image from "next/image";
 // @ts-ignore
@@ -12,7 +13,7 @@ import {
     BsPower
 } from "react-icons/bs";
 
-const Navigation = () => {
+const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab: any }) => {
 
     const navigation = [
         {
@@ -51,7 +52,6 @@ const Navigation = () => {
         //     link: ""
         // }
     ];
-
     const bottomNavigation = [
         {
             icon: <BsInfoCircle/>,
@@ -76,12 +76,11 @@ const Navigation = () => {
             <div className="flex flex-col items-center mt-10 gap-y-4">
                 <h3 className="text-[12px] uppercase block w-full">Menus</h3>
                 {navigation.map((item, index) => (
-                    <div key={index}
-                         className="flex items-center text-sm text-neutral-600 transition duration-300 space-x-2 cursor-pointer w-full hover:bg-neutral-100 p-2 px-4 rounded-xl">
-                        <div className="">
-                            {item.icon}
-                        </div>
-                        <span className="text-neutral-700">
+                    <div key={index} onClick={() => setActiveTab("tab" + index)}
+                         className={`flex items-center text-sm space-x-2 cursor-pointer w-full p-2 px-4 rounded-xl
+                         ${activeTab === "tab" + index ? "bg-black text-white" : "text-neutral-600"} `}>
+                        {item.icon}
+                        <span className="">
                             {item.title}
                         </span>
                     </div>
