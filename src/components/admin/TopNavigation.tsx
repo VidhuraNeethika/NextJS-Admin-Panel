@@ -16,7 +16,7 @@ const TopNavigation = ({activeTab, setActiveTab}: { activeTab: string, setActive
         <div className="w-full h-20 px-8 bg-neutral-50 rounded-xl">
             <div className="w-full h-full grid grid-cols-2 lg:grid-cols-3">
                 <div className="flex items-center">
-                    <img src={Logo.src} alt="logo" className="w-20 object-contain lg:hidden"/>
+                    <img src={Logo.src} alt="logo" className="h-6 object-contain lg:hidden"/>
                     <span className="font-bold text-neutral-900 hidden lg:block">Welcome to Dashboard</span>
                 </div>
                 <div className="items-center justify-center hidden lg:flex">
