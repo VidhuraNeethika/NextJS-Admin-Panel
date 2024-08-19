@@ -72,7 +72,7 @@ const Navigation = () => {
 
     return (
         <div className="w-full bg-neutral-50 h-full px-6 py-8 rounded-2xl relative">
-            <Image src={Logo} alt="logo" className="w-1/3 object-contain mx-auto"/>
+            <Image src={Logo} alt="logo" className="h-16 w-fit object-contain lg:mx-auto"/>
             <div className="flex flex-col items-center mt-10 gap-y-4">
                 <h3 className="text-[12px] uppercase block w-full">Menus</h3>
                 {navigation.map((item, index) => (
