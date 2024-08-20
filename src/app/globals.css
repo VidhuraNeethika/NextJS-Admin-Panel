@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*customize scroll bar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded-full;
+}
