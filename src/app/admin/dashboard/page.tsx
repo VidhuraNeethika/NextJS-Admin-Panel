@@ -2,7 +2,7 @@
 import Navigation from "@/components/admin/Navigation";
 import TopNavigation from "@/components/admin/TopNavigation";
 import {useState} from "react";
-import Dashboard from "@/components/Dashboard";
+import Dashboard from "@/components/admin/Dashboard";
 import ManageStays from "@/components/admin/ManageStays";
 
 const page = () => {
