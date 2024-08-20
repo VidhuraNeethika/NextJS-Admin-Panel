@@ -3,15 +3,16 @@ import Logo from "../../assets/img/logo/logo.png";
 import Image from "next/image";
 // @ts-ignore
 import {
-    BsAirplaneFill,
+    BsAirplaneFill, BsBack, BsBook, BsBookFill,
     BsBookmarkPlusFill,
     BsBuildingFill,
     BsCarFrontFill,
     BsFillGrid1X2Fill,
-    BsGearFill,
+    BsGearFill, BsHouse, BsHouseFill,
     BsInfoCircle,
     BsPower
 } from "react-icons/bs";
+import {BiSolidUser} from "react-icons/bi";
 
 const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab: any }) => {
 
@@ -22,7 +23,7 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
             link: ""
         },
         {
-            icon: <BsBuildingFill/>,
+            icon: <BsHouseFill/>,
             title: "Manage Stays",
             link: ""
         },
@@ -41,16 +42,22 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
             title: "Bookings",
             link: ""
         },
-        // {
-        //     icon: <BsGearFill/>,
-        //     title: "Settings",
-        //     link: ""
-        // },
-        // {
-        //     icon: <BsPower/>,
-        //     title: "Logout",
-        //     link: ""
-        // }
+        {
+            icon: <BsBuildingFill/>,
+            title: "Manage Hotels",
+            link: ""
+        },
+        {
+            icon: <BiSolidUser/>,
+            title: "Manage Users",
+            link: ""
+        },
+        {
+            icon: <BsBookFill/>,
+            title: "Manage Blogs",
+            link: ""
+        }
+
     ];
     const bottomNavigation = [
         {
@@ -89,7 +96,7 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
 
             <div className="w-full px-6">
                 <h3 className="text-[12px] uppercase block w-full mb-3">Profile</h3>
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-4 bg-white w-full p-2 px-3 shadow-xl shadow-neutral-100 rounded-xl">
                     <div className="w-12 h-12 rounded-full overflow-clip">
                         <img
                             src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
