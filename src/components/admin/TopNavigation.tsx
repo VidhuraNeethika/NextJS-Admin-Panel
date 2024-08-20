@@ -20,7 +20,7 @@ const TopNavigation = ({activeTab, setActiveTab}: { activeTab: string, setActive
                     <span className="font-bold text-neutral-900 hidden lg:block">Welcome to Dashboard</span>
                 </div>
                 <div className="items-center justify-center hidden lg:flex">
-                    <div className="flex gap-4 w-full h-10 bg-white rounded-lg items-center px-4">
+                    <div className="flex gap-4 w-full h-10 bg-white rounded-lg items-center px-4 shadow-xl shadow-neutral-100">
                         <FiSearch className="bg-white"/>
                         <input type="text" placeholder="Search" className="bg-transparent outline-0 text-sm w-full"/>
                     </div>
