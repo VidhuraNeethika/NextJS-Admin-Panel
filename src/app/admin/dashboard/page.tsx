@@ -17,7 +17,7 @@ const page = () => {
             <div
                 className="col-span-full lg:col-span-9 xl:col-span-10 w-full h-full rounded-2xl flex flex-col">
                 <TopNavigation activeTab={activeTab} setActiveTab={setActiveTab}/>
-                <div className="w-full mt-4 h-full bg-neutral-200 rounded-xl overflow-auto">
+                <div className="w-full mt-4 h-full bg-neutral-100 rounded-xl overflow-auto">
                     {activeTab === "tab0" && <Dashboard/>}
                     {activeTab === "tab1" && <ManageStays/>}
                 </div>
