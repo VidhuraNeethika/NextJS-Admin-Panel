@@ -11,25 +11,29 @@ const Dashboard = () => {
             title: 'Products',
             total: 10,
             icon: <BsBox/>,
-            description: 'Total products in your store for this month'
+            description: 'Total products in your store for this month',
+            color: 'bg-[#e6f5f9]'
         },
         {
             title: 'Orders',
             total: 20,
             icon: <BsBoxes/>,
-            description: 'Total orders in your store for this month'
+            description: 'Total orders in your store for this month',
+            color: 'bg-[#effcef]'
         },
         {
             title: 'Customers',
             total: 30,
             icon: <FiUsers/>,
-            description: 'Total customers in your store for this month'
+            description: 'Total customers in your store for this month',
+            color: 'bg-[#eff6fc]'
         },
         {
             title: 'Revenue',
             total: '$1000',
             icon: <MdOutlineAttachMoney/>,
-            description: 'Total revenue generated for this month'
+            description: 'Total revenue generated for this month',
+            color: 'bg-[#e6f5f9]'
         }
     ];
 
@@ -89,16 +93,16 @@ const Dashboard = () => {
                     orders, and customers.</p>
             </div>
 
-            <div className="grid grid-cols-12 mt-6 gap-4">
+            <div className="grid grid-cols-12 gap-4">
 
                 <div className="xl:col-span-9 col-span-full">
 
                     <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-4 mt-6 w-full">
                         {dashboardTopCards.map((card, index) => (
                             <div key={index}
-                                 className="bg-white p-4 rounded-lg flex items-center justify-between shadow-xl shadow-neutral-100">
+                                 className={`${card.color} p-4 rounded-lg flex items-center justify-between`}>
                                 <div>
-                                    <span className="text-neutral-400 block">{card.title}</span>
+                                    <span className="text-neutral-700 block">{card.title}</span>
                                     <span className="text-4xl block mt-2">{card.total}</span>
                                     <span className="text-neutral-400 block mt-2 text-[12px]">{card.description}</span>
                                 </div>
@@ -112,7 +116,7 @@ const Dashboard = () => {
                     <div className="mt-6">
                         <h3>Performance Tracking</h3>
                         <hr className="my-5"/>
-                        <div className="w-full h-full bg-white p-4 rounded-lg shadow-xl shadow-neutral-100">
+                        <div className="w-full h-full mt-8">
                             <Chart type={`area`} options={{
                                 chart: {
                                     id: 'area-datetime',
@@ -142,13 +146,13 @@ const Dashboard = () => {
                                        color: '#f9cacc',
                                    }]}
                                    width={`100%`}
-                                   height={`450px`}
+                                   height={`420px`}
                             />
                         </div>
                     </div>
                 </div>
 
-                <div className="xl:col-span-3 col-span-full">
+                <div className="xl:col-span-3 col-span-full xl:mt-6">
 
                     <div className="w-full">
                         <h3>Current Task</h3>
@@ -156,7 +160,7 @@ const Dashboard = () => {
                         <div>
                             {tasks.map((task, index) => (
                                 <div key={index}
-                                     className="bg-white p-4 rounded-lg flex items-center justify-between mt-4 shadow-xl shadow-neutral-100">
+                                     className="bg-[#eff1f6] p-4 rounded-lg flex items-center justify-between mt-4">
                                     <div className="flex items-center">
                                         <div className={`text-xl ${task.color} text-white rounded-full p-2`}>
                                             {task.icon}
@@ -169,7 +173,7 @@ const Dashboard = () => {
                                     </div>
                                     <div>
                                     <span
-                                        className="text-neutral-300 block border border-neutral-200 rounded-full px-2 p-1 text-[12px]">{task.status}</span>
+                                        className="text-neutral-400 block border border-neutral-200 bg-white rounded-full px-2 p-1 text-[12px]">{task.status}</span>
                                     </div>
                                 </div>
                             ))}
@@ -183,7 +187,7 @@ const Dashboard = () => {
                         <div>
                             {topCustomers.map((customer, index) => (
                                 <div key={index}
-                                     className="bg-white p-4 rounded-lg flex items-center justify-between mt-4 shadow-xl shadow-neutral-100">
+                                     className="bg-[#eff1f6] p-4 rounded-lg flex items-center justify-between mt-4">
                                     <div className="flex items-center">
                                         <img src={customer.image} alt=""
                                              className="w-12 aspect-square rounded-full object-cover"/>

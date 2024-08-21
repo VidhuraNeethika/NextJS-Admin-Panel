@@ -86,13 +86,13 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
     ];
 
     return (
-        <div className="w-full bg-neutral-50 h-full px-6 py-8 rounded-2xl flex justify-between flex-col">
+        <div className="w-full bg-white h-full px-6 py-8 rounded-2xl flex justify-between flex-col border-violet-100 border backdrop-blur-2xl xl:opacity-90">
             <Image src={Logo} alt="logo" className="h-10 w-fit object-contain lg:mx-auto"/>
             <div className="flex flex-col h-full items-center mt-10 gap-y-4 w-full overflow-auto pe-4 lg:pe-0">
                 <h3 className="text-[12px] uppercase block w-full">Menus</h3>
                 {navigation.map((item, index) => (
                     <div key={index} onClick={() => setActiveTab("tab" + index)}
-                         className={`flex items-center text-sm space-x-2 cursor-pointer w-full p-2 px-4 rounded-xl text-neutral-500 
+                         className={`flex items-center text-sm space-x-2 cursor-pointer w-full p-2 px-4 rounded-md text-neutral-500 
                          ${activeTab === "tab" + index ? "bg-black text-white" : ""} `}>
                         {item.icon}
                         <span className="">
