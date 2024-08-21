@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
     BsAirplaneFill, BsBack, BsBook, BsBookFill,
     BsBookmarkPlusFill,
-    BsBuildingFill,
+    BsBuildingFill, BsBuildings,
     BsCarFrontFill,
     BsFillGrid1X2Fill,
     BsGearFill, BsHouse, BsHouseFill,
@@ -13,47 +13,55 @@ import {
     BsPower
 } from "react-icons/bs";
 import {BiSolidUser} from "react-icons/bi";
+import {TbLayoutDashboard} from "react-icons/tb";
+import {RxDashboard, RxHome} from "react-icons/rx";
+import {MdOutlineSpaceDashboard} from "react-icons/md";
+import {PiAirplaneInFlight} from "react-icons/pi";
+import {LiaCarSideSolid} from "react-icons/lia";
+import {IoBookmarksOutline, IoSettingsOutline} from "react-icons/io5";
+import {HiOutlineBuildingOffice2} from "react-icons/hi2";
+import {LuPenLine, LuUsers2} from "react-icons/lu";
 
 const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab: any }) => {
 
     const navigation = [
         {
-            icon: <BsFillGrid1X2Fill/>,
+            icon: <MdOutlineSpaceDashboard />,
             title: "Dashboard",
             link: ""
         },
         {
-            icon: <BsHouseFill/>,
+            icon: <RxHome />,
             title: "Manage Stays",
             link: ""
         },
         {
-            icon: <BsAirplaneFill/>,
+            icon: <PiAirplaneInFlight />,
             title: "Manage Flights",
             link: ""
         },
         {
-            icon: <BsCarFrontFill/>,
+            icon: <LiaCarSideSolid />,
             title: "Manage Cars",
             link: ""
         },
         {
-            icon: <BsBookmarkPlusFill/>,
+            icon: <IoBookmarksOutline />,
             title: "Bookings",
             link: ""
         },
         {
-            icon: <BsBuildingFill/>,
+            icon: <HiOutlineBuildingOffice2 />,
             title: "Manage Hotels",
             link: ""
         },
         {
-            icon: <BiSolidUser/>,
+            icon: <LuUsers2 />,
             title: "Manage Users",
             link: ""
         },
         {
-            icon: <BsBookFill/>,
+            icon: <LuPenLine />,
             title: "Manage Blogs",
             link: ""
         }
@@ -66,7 +74,7 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
             link: ""
         },
         {
-            icon: <BsGearFill/>,
+            icon: <IoSettingsOutline />,
             title: "Settings",
             link: ""
         },
@@ -84,8 +92,8 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
                 <h3 className="text-[12px] uppercase block w-full">Menus</h3>
                 {navigation.map((item, index) => (
                     <div key={index} onClick={() => setActiveTab("tab" + index)}
-                         className={`flex items-center text-sm space-x-2 cursor-pointer w-full p-2 px-4 rounded-xl
-                         ${activeTab === "tab" + index ? "bg-black text-white" : "text-neutral-600"} `}>
+                         className={`flex items-center text-sm space-x-2 cursor-pointer w-full p-2 px-4 rounded-xl text-neutral-500 
+                         ${activeTab === "tab" + index ? "bg-black text-white" : ""} `}>
                         {item.icon}
                         <span className="">
                             {item.title}
@@ -94,14 +102,12 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
                 ))}
             </div>
 
-            <div className="w-full px-6">
+            <div className="w-full">
                 <h3 className="text-[12px] uppercase block w-full mb-3">Profile</h3>
-                <div className="flex items-center space-x-4 bg-white w-full p-2 px-3 shadow-xl shadow-neutral-100 rounded-xl">
-                    <div className="w-12 h-12 rounded-full overflow-clip">
-                        <img
-                            src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="logo" className="object-cover bg-neutral-200 w-full h-full"/>
-                    </div>
+                <div className="flex items-center space-x-4 w-full">
+                    <img
+                        src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="logo" className="object-cover w-10 h-10 rounded-full"/>
                     <div>
                         <h1 className="text-neutral-800 font-semibold text-sm">John Doe</h1>
                         <p className="text-neutral-600 text-xs">john@gmail.com</p>
@@ -118,7 +124,7 @@ const Navigation = ({activeTab, setActiveTab}: { activeTab: string, setActiveTab
                             <div className="">
                                 {item.icon}
                             </div>
-                            <span className="text-neutral-700">
+                            <span className="text-neutral-400">
                                 {item.title}
                             </span>
                         </div>
