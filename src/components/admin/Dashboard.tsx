@@ -61,7 +61,7 @@ const Dashboard = () => {
     ]
 
     return (
-        <div className="w-full h-full p-8 overflow-y-auto">
+        <div className="w-full h-full p-8 overflow-y-auto pb-40">
             <div>
                 <h2 className="text-3xl">Hello, Allen,</h2>
                 <p className="text-neutral-400 mt-2">Welcome to your dashboard. Here you can manage your products,
