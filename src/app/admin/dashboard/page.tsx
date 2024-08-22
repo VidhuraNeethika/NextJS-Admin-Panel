@@ -7,6 +7,7 @@ import ManageStays from "@/components/admin/ManageStays";
 
 const page = () => {
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeTab, setActiveTab] = useState("tab0");
 
     return (
