@@ -10,6 +10,7 @@ const ManageStays = dynamic(() => import('@/components/admin/ManageStays'), { ss
 
 const page = () => {
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeTab, setActiveTab] = useState("tab0");
 
     return (
