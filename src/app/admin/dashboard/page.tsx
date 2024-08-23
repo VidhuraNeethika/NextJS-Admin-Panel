@@ -2,8 +2,11 @@
 import Navigation from "@/components/admin/Navigation";
 import TopNavigation from "@/components/admin/TopNavigation";
 import {useState} from "react";
-import Dashboard from "@/components/admin/Dashboard";
-import ManageStays from "@/components/admin/ManageStays";
+import dynamic from 'next/dynamic';
+
+// Dynamically import Dashboard and ManageStays components with SSR disabled
+const Dashboard = dynamic(() => import('@/components/admin/Dashboard'), { ssr: false });
+const ManageStays = dynamic(() => import('@/components/admin/ManageStays'), { ssr: false });
 
 const page = () => {
 
